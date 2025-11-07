@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,22 +13,18 @@
     body { font-family: 'Noto Sans Arabic', 'Tahoma', sans-serif; }
   </style>
 </head>
-
 <body class="bg-gradient-to-br from-blue-50 to-green-50 min-h-screen font-sans text-right">
   <div class="container mx-auto p-6 max-w-4xl" dir="rtl">
     <div class="text-center mb-8">
       <h1 class="text-4xl font-bold text-green-700" data-i18n="calcTitle">حسابك</h1>
     </div>
-
     <!-- 输入表单 -->
     <div id="input-form" class="bg-white rounded-2xl shadow-xl p-8 mb-8"></div>
-
     <!-- 计算按钮 -->
     <button id="calc-btn" disabled
       class="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-4 rounded-xl font-bold text-xl mb-8 opacity-50 cursor-not-allowed">
       <span data-i18n="calcNow">احسب!</span>
     </button>
-
     <!-- 结果区 -->
     <div id="result" class="hidden">
       <div class="bg-green-50 rounded-2xl p-8 mb-6">
@@ -39,7 +34,6 @@
         <div id="breakdown-list" class="space-y-6 mb-8"></div>
         <canvas id="chart" class="mx-auto max-w-md"></canvas>
       </div>
-
       <!-- 分享 & PDF -->
       <div class="text-center space-x-4">
         <button id="share-btn" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
@@ -56,13 +50,13 @@
     document.addEventListener('DOMContentLoaded', function () {
       const { jsPDF } = window.jspdf;
 
-      // === 1. URL 参数 ===
+      // ==================== 1. URL 参数 ====================
       const urlParams = new URLSearchParams(window.location.search);
       let canton = urlParams.get('c') || 'ZH';
       const situation = urlParams.get('s') || 'family';
       const lang = urlParams.get('lang') || 'ar';
 
-      // === 2. 翻译 ===
+      // ==================== 2. 翻译 ====================
       const t = {
         calcTitle: "حسابك",
         calcNow: "احسب!",
@@ -81,11 +75,10 @@
         premiumLabel: "قسط البالغ الشهري (فرنك سويسري لكل شخص)",
         kidsEducationLabel: "عدد الأطفال في التعليم (>16 عاماً)"
       };
-
       document.querySelector('[data-i18n="calcTitle"]').textContent = t.calcTitle;
       document.querySelector('[data-i18n="calcNow"]').textContent = t.calcNow;
 
-      // === 3. 输入配置 ===
+      // ==================== 3. 输入配置 ====================
       const inputConfigs = {
         family: [
           { id: "income", label: "دخل الأسرة الشهري (فرنك سويسري)", type: "number", placeholder: "مثال 4000", min: 0 },
@@ -97,7 +90,7 @@
         ]
       };
 
-      // === 4. 渲染输入 ===
+      // ==================== 4. 渲染输入 ====================
       function renderInputs() {
         const form = document.getElementById('input-form');
         form.innerHTML = inputConfigs.family.map(inp => `
@@ -107,17 +100,15 @@
               placeholder="${inp.placeholder}" ${inp.min !== undefined ? `min="${inp.min}"` : ''}>
           </div>
         `).join('');
-
         document.getElementById('calc-btn').onclick = calculate;
         enableCalcButton();
       }
 
-      // === 5. 联邦 & 州数据 (2025) - 完整26州 ===
+      // ==================== 5. 联邦 & 州数据 (2025) - 完整26州 ====================
       const federalData = {
         familienzulage_child: 215,
         familienzulage_education: 268
       };
-
       const cantonsData = {
         "AG": { familienzulagen_bonus: 0, praemien: { threshold_family: 65000, rate: 0.16, child_bonus_monthly: 108.33, ref_premium_adult_monthly: 456, max_reduction_monthly: 400 }, wohnbeihilfe: { max_housing_monthly_family: 1600, affordability_rate: 0.3 }, apply_links: { praemienverbilligung: "ag.ch/praemienverbilligung", wohnbeihilfe: "ag.ch/sozialhilfe" } },
         "AI": { familienzulagen_bonus: 30, praemien: { threshold_family: 70000, rate: 0.07, child_bonus_monthly: 100, ref_premium_adult_monthly: 456, max_reduction_monthly: 350 }, wohnbeihilfe: { max_housing_monthly_family: 1400, affordability_rate: 0.3 }, apply_links: { praemienverbilligung: "ai.ch/praemienverbilligung", wohnbeihilfe: "ai.ch/sozialhilfe" } },
@@ -147,7 +138,7 @@
         "ZH": { familienzulagen_bonus: 0, praemien: { threshold_family: 88580, rate: 0.1, child_bonus_monthly: 150, ref_premium_adult_monthly: 456, max_reduction_monthly: 400 }, wohnbeihilfe: { max_housing_monthly_family: 1700, affordability_rate: 0.3 }, apply_links: { praemienverbilligung: "svazurich.ch/praemienverbilligung", wohnbeihilfe: "zh.ch/sozialhilfe" } }
       };
 
-      // === 6. 启用计算按钮 ===
+      // ==================== 6. 启用计算按钮 ====================
       function enableCalcButton() {
         const inputs = document.querySelectorAll('#input-form input');
         const btn = document.getElementById('calc-btn');
@@ -159,7 +150,7 @@
         }));
       }
 
-      // === 7. 计算函数 ===
+      // ==================== 7. 计算函数 ====================
       let total = 0;
       let breakdown = {};
       let inputs = {};
@@ -172,11 +163,9 @@
           rent: +document.getElementById('rent').value,
           premium_adult: +document.getElementById('premium_adult').value
         };
-
         if (inputs.plz.length !== 4 || isNaN(+inputs.plz)) {
           alert(t.plzError); return;
         }
-
         const cantonData = cantonsData[canton] || cantonsData["ZH"];
         const p = cantonData.praemien;
         const w = cantonData.wohnbeihilfe;
@@ -199,7 +188,6 @@
 
         document.getElementById('total-amount').textContent = Math.round(total).toLocaleString();
         document.getElementById('result').classList.remove('hidden');
-
         renderBreakdown();
         renderChart();
       };
@@ -224,23 +212,42 @@
         });
       }
 
-      // === 8. PDF 生成 ===
-      window.generatePDF = function () {
+      // ==================== 8. 加载阿拉伯字体（修复乱码） ====================
+      async function loadArabicFont() {
+        const response = await fetch('https://cdn.jsdelivr.net/npm/noto-sans-arabic@2.0.0/dist/NotoSansArabic-Regular.ttf');
+        const arrayBuffer = await response.arrayBuffer();
+        const base64 = btoa(String.fromCharCode(...new Uint8Array(arrayBuffer)));
+        return `data:font/truetype;base64,${base64}`;
+      }
+
+      // ==================== 9. PDF 生成（已修复乱码 + RTL） ====================
+      window.generatePDF = async function () {
+        const { jsPDF } = window.jspdf;
         const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+
+        // 加载并添加阿拉伯字体
+        const arabicFontBase64 = await loadArabicFont();
+        doc.addFileToVFS('NotoSansArabic.ttf', arabicFontBase64);
+        doc.addFont('NotoSansArabic.ttf', 'NotoSansArabic', 'normal');
+        doc.setFont('NotoSansArabic');
+
         const cantonData = cantonsData[canton] || cantonsData["ZH"];
 
-        doc.setFont('helvetica', 'bold');
+        // 标题
         doc.setFontSize(16);
         doc.text("WelfareCalc.ch – تقرير المساعدات الاجتماعية (2025)", 105, 20, { align: 'center' });
 
+        // 基本信息
         doc.setFontSize(11);
         doc.text(`الكانتون: ${canton} | الرمز البريدي: ${inputs.plz} | التاريخ: ${new Date().toLocaleDateString('ar-CH')}`, 195, 35, { align: 'right' });
 
+        // 总金额
         doc.setFontSize(14);
         doc.setTextColor(22, 163, 74);
-        doc.text(`${t.totalLabel}: ${Math.round(total).toLocaleString()} فرنك/سنة`, 195, 50, { align: 'right' });
+        doc.text(`المبلغ الإجمالي: ${Math.round(total).toLocaleString()} فرنك/سنة`, 195, 50, { align: 'right' });
         doc.setTextColor(0);
 
+        // 表格数据
         const tableData = Object.entries(breakdown)
           .filter(([_, v]) => v > 0)
           .map(([name, amount]) => {
@@ -254,19 +261,24 @@
               const capped = Math.min(inputs.rent, cantonData.wohnbeihilfe.max_housing_monthly_family);
               formula = `max(0, ${capped} - ${inputs.income} × 0.3) × 12`;
             }
-            return [name === 'Family Allowance' ? 'بدل العائلة' : name === 'Premium Reduction' ? 'تخفيض القسط' : 'مساعدة السكن', `${amount.toLocaleString()} فرنك/سنة`, formula];
+            return [
+              name === 'Family Allowance' ? 'بدل العائلة' : name === 'Premium Reduction' ? 'تخفيض القسط' : 'مساعدة السكن',
+              `${amount.toLocaleString()} فرنك/سنة`,
+              formula
+            ];
           });
 
         doc.autoTable({
           head: [['البند', 'المبلغ', 'الصيغة']],
           body: tableData,
           startY: 60,
-          styles: { font: 'helvetica', fontSize: 10, halign: 'right', cellPadding: 3 },
+          styles: { font: 'NotoSansArabic', fontSize: 10, halign: 'right', cellPadding: 3 },
           headStyles: { fillColor: [34, 139, 34], textColor: 255 },
           alternateRowStyles: { fillColor: [240, 253, 244] },
           columnStyles: { 0: { fontStyle: 'bold' } }
         });
 
+        // 申请链接
         let y = doc.lastAutoTable.finalY + 10;
         doc.setFontSize(12);
         doc.text("كيفية التقديم:", 195, y, { align: 'right' }); y += 7;
@@ -284,7 +296,7 @@
         doc.save(`WelfareCalc-${canton}-${new Date().toISOString().slice(0,10)}.pdf`);
       };
 
-      // === 9. 分享 & 广告 ===
+      // ==================== 10. 分享 & 广告 ====================
       window.shareToUnlock = function () {
         if (!total) return alert("احسب أولاً!");
         if (navigator.share) {
@@ -312,12 +324,11 @@
         }, 1000);
       };
 
-      // === 10. 初始化 ===
+      // ==================== 11. 初始化 ====================
       renderInputs();
       document.getElementById('share-btn').onclick = shareToUnlock;
       document.getElementById('ad-btn').onclick = showAdThenPDF;
     });
   </script>
 </body>
-
 </html>
