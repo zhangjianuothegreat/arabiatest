@@ -1,0 +1,713 @@
+{
+  "federal_rate": 0.115,
+  "federal_description": "Federal income tax rate (progressive, max 11.5% for income > CHF 940,800 married / CHF 793,400 single).",
+  "federal_source": "ESTV Direkte Bundessteuer Tarife 2025 - https://www.estv.admin.ch/estv/en/home/direkte-bundessteuer/dbst-tarife-und-verlaesst.html",
+  "tax_year": 2025,
+  "disclaimer": "Die angegebenen Steuersätze gelten für die Kantonshauptorte (Hauptstädte der Kantone). Die Gemeindesteuern können je nach Wohnort um ca. 50–200 CHF pro Jahr abweichen. Für exakte Berechnung nutzen Sie bitte den offiziellen ESTV-Rechner.",
+  "official_calculator_link": "https://swisstaxcalculator.estv.admin.ch/#/taxdata/tax-rates",
+  "cantons": {
+    "AG": {
+      "hauptort": "Aarau",
+      "cantonal_multiplier": 1.30,
+      "communal_multiplier": 1.15,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025 (NP 2025, XLSX)",
+      "familien": {
+        "name": "SVA Aargau (Ausgleichskasse)",
+        "tel": "+41 62 836 81 81",
+        "addr": "Kyburgerstrasse 15, Postfach 5001 Aarau",
+        "website": "https://www.sva-ag.ch",
+        "email": "info@sva-ag.ch"
+      },
+      "praemien": {
+        "name": "Gemeindezweigstelle der SVA Aargau (Prämienverbilligung)",
+        "tel": "+41 62 836 81 81",
+        "addr": "Bahnhofplatz 3C, 5001 Aarau",
+        "website": "https://www.sva-ag.ch",
+        "email": "info@sva-ag.ch"
+      },
+      "wohn": {
+        "name": "Kantonaler Sozialdienst",
+        "tel": "+41 62 835 29 90",
+        "addr": "Obere Vorstadt 3, Postfach 2254, 5001 Aarau",
+        "website": "https://www.ag.ch/de/ueber-uns/verwaltung/departement-gesundheit-und-soziales/organisation/kantonaler-sozialdienst",
+        "email": "info.ksd@ag.ch"
+      }
+    },
+    "AI": {
+      "hauptort": "Appenzell",
+      "cantonal_multiplier": 1.00,
+      "communal_multiplier": 0.80,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Ausgleichskasse Appenzell Innerrhoden",
+        "tel": "+41 71 788 18 30",
+        "addr": "Landstrasse 39, 9050 Appenzell",
+        "website": "https://www.akai.ch",
+        "email": "info@akai.ch"
+      },
+      "praemien": {
+        "name": "Gesundheitsamt des Kantons Appenzell Innerrhoden",
+        "tel": "+41 71 788 94 52",
+        "addr": "Hoferbad 2, 9050 Appenzell",
+        "website": "https://www.ai.ch/gesundheit",
+        "email": "info@ai.ch"
+      },
+      "wohn": {
+        "name": "Sozialamt - Soziale Dienste",
+        "tel": "+41 71 788 94 55",
+        "addr": "Hoferbad 2, 9050 Appenzell",
+        "website": "https://www.ai.ch/soziales",
+        "email": "herta.kaddu@gsd.ai.ch"
+      }
+    },
+    "AR": {
+      "hauptort": "Herisau",
+      "cantonal_multiplier": 1.40,
+      "communal_multiplier": 1.20,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Sozialversicherungen Appenzell Ausserrhoden",
+        "tel": "+41 71 354 51 51",
+        "addr": "Neue Steig 15, Postfach 1254, 9100 Herisau",
+        "website": "https://www.sovar.ch",
+        "email": "info@sovar.ch"
+      },
+      "praemien": {
+        "name": "Sozialversicherungen Appenzell Ausserrhoden",
+        "tel": "+41 71 354 51 51",
+        "addr": "Neue Steig 15, Postfach 1254, 9100 Herisau",
+        "website": "https://www.sovar.ch",
+        "email": "info@sovar.ch"
+      },
+      "wohn": {
+        "name": "Amt für Soziales - Abteilung Sozialhilfe und Asyl",
+        "tel": "+41 71 353 64 46",
+        "addr": "Kasernenstrasse 17, 9102 Herisau",
+        "website": "https://www.ar.ch/soziales",
+        "email": "sozialhilfe@ar.ch"
+      }
+    },
+    "BE": {
+      "hauptort": "Bern",
+      "cantonal_multiplier": 2.975,
+      "communal_multiplier": 1.00,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Ausgleichskasse des Kantons Bern",
+        "tel": "+41 31 379 79 79",
+        "addr": "Effingerstrasse 29, Postfach 1343, 3001 Bern",
+        "website": "https://www.akbern.ch",
+        "email": "info@akbern.ch"
+      },
+      "praemien": {
+        "name": "Amt für Sozialversicherungen",
+        "tel": "+41 31 636 45 00",
+        "addr": "Forelstrasse 1, 3072 Ostermundigen",
+        "website": "https://www.jgk.be.ch",
+        "email": "sozialversicherungen@gef.be.ch"
+      },
+      "wohn": {
+        "name": "Sozialamt",
+        "tel": "+41 31 633 78 11",
+        "addr": "Rathausgasse 1, 3011 Bern",
+        "website": "https://www.be.ch/soziales",
+        "email": "info.soa@gef.be.ch"
+      }
+    },
+    "BL": {
+      "hauptort": "Liestal",
+      "cantonal_multiplier": 1.45,
+      "communal_multiplier": 1.10,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "SVA Basel-Landschaft",
+        "tel": "+41 61 425 25 25",
+        "addr": "Hauptstrasse 109, 4102 Binningen",
+        "website": "https://www.sva-bl.ch",
+        "email": "info@sva-bl.ch"
+      },
+      "praemien": {
+        "name": "SVA Basel-Landschaft",
+        "tel": "+41 61 425 25 25",
+        "addr": "Hauptstrasse 109, 4102 Binningen",
+        "website": "https://www.sva-bl.ch",
+        "email": "info@sva-bl.ch"
+      },
+      "wohn": {
+        "name": "Kantonales Sozialamt",
+        "tel": "+41 61 552 51 11",
+        "addr": "Gestadeckplatz 8, 4410 Liestal",
+        "website": "https://www.baselland.ch/sozialamt",
+        "email": "sebastian.helmy@bl.ch"
+      }
+    },
+    "BS": {
+      "hauptort": "Basel",
+      "cantonal_multiplier": 1.00,
+      "communal_multiplier": 1.00,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Ausgleichskasse Basel-Stadt",
+        "tel": "+41 61 685 22 22",
+        "addr": "St. Alban-Anlage 48, 4052 Basel",
+        "website": "https://www.ak-bs.ch",
+        "email": "info@ak-bs.ch"
+      },
+      "praemien": {
+        "name": "Amt für Sozialbeiträge Basel-Stadt",
+        "tel": "+41 61 267 87 11",
+        "addr": "Grenzacherstrasse 62, Postfach 4005 Basel",
+        "website": "https://www.asb.bs.ch",
+        "email": "info@asb.bs.ch"
+      },
+      "wohn": {
+        "name": "Sozialhilfe (Departement für Wirtschaft, Soziales und Umwelt)",
+        "tel": "+41 61 685 16 00",
+        "addr": "Klybeckstrasse 15, Postfach 570, 4007 Basel",
+        "website": "https://www.bs.ch/sozialhilfe",
+        "email": "rudolf.illes@bs.ch"
+      }
+    },
+    "FR": {
+      "hauptort": "Fribourg",
+      "cantonal_multiplier": 1.55,
+      "communal_multiplier": 1.30,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Caisse de compensation du canton de Fribourg",
+        "tel": "+41 26 426 70 00",
+        "addr": "Impasse de la Colline 1, Case postale 1762 Givisiez",
+        "website": "https://www.ecasfr.ch",
+        "email": "info@ecasfr.ch"
+      },
+      "praemien": {
+        "name": "Ausgleichskasse des Kantons Freiburg, Abteilung Prämienverbilligung",
+        "tel": "+41 26 426 77 00",
+        "addr": "Impasse de la Colline 1, 1762 Givisiez",
+        "website": "https://www.ecasfr.ch",
+        "email": "N/A"
+      },
+      "wohn": {
+        "name": "Service de l'action sociale",
+        "tel": "+41 26 305 29 92",
+        "addr": "Route des Cliniques 17, 1701 Fribourg",
+        "website": "https://www.fr.ch/sas",
+        "email": "simonetjc@fr.ch"
+      }
+    },
+    "GE": {
+      "hauptort": "Genf",
+      "cantonal_multiplier": 1.00,
+      "communal_multiplier": 0.459,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Office cantonal des assurances sociales Caisse genevoise de compensation",
+        "tel": "+41 22 327 27 27",
+        "addr": "Rue des Gares 12, Case postale 2595, 1211 Genève 2",
+        "website": "https://www.ocas.ch",
+        "email": "N/A"
+      },
+      "praemien": {
+        "name": "Service de l'assurance-maladie",
+        "tel": "+41 22 546 19 00",
+        "addr": "Route de Frontenex 62, 1207 Genève",
+        "website": "https://www.geneve.ch/sam",
+        "email": "sam@etat.ge.ch"
+      },
+      "wohn": {
+        "name": "Office de l’action, de l’insertion et de l’intégration sociales (OAIS)",
+        "tel": "+41 22 420 61 49",
+        "addr": "Bd Georges-Favon 26, Case postale 5684, 1211 Genève 11",
+        "website": "https://www.geneve.ch/oais",
+        "email": "Aldo.maffia@etat.ge.ch"
+      }
+    },
+    "GL": {
+      "hauptort": "Glarus",
+      "cantonal_multiplier": 1.20,
+      "communal_multiplier": 0.95,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "sozialversicherungen glarus",
+        "tel": "+41 55 648 11 11",
+        "addr": "Landstrasse 11, 8750 Glarus",
+        "website": "https://www.svgl.ch",
+        "email": "info@svgl.ch"
+      },
+      "praemien": {
+        "name": "Kantonale Steuerverwaltung, Abteilung IPV",
+        "tel": "+41 55 646 61 65",
+        "addr": "Hauptstrasse 11/17, 8750 Glarus",
+        "website": "https://www.gl.ch/ipv",
+        "email": "steuern@gl.ch"
+      },
+      "wohn": {
+        "name": "Hauptabteilung Soziales (Departement Volkswirtschaft und Inneres)",
+        "tel": "+41 55 646 67 00",
+        "addr": "Zwinglistr. 6, 8750 Glarus",
+        "website": "https://www.gl.ch/soziales",
+        "email": "soziales@gl.ch"
+      }
+    },
+    "GR": {
+      "hauptort": "Chur",
+      "cantonal_multiplier": 1.25,
+      "communal_multiplier": 1.10,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Sozialversicherungsanstalt des Kantons Graubünden",
+        "tel": "+41 81 257 41 11",
+        "addr": "Ottostrasse 24, Postfach 7001 Chur",
+        "website": "https://www.sva.gr.ch",
+        "email": "info@sva.gr.ch"
+      },
+      "praemien": {
+        "name": "Sozialversicherungsanstalt des Kantons Graubünden",
+        "tel": "+41 81 257 41 11",
+        "addr": "Ottostrasse 24, Postfach 7001 Chur",
+        "website": "https://www.sva.gr.ch",
+        "email": "info@sva.gr.ch"
+      },
+      "wohn": {
+        "name": "Kantonales Sozialamt",
+        "tel": "+41 81 257 26 54",
+        "addr": "Gürtelstrasse 89, 7001 Chur",
+        "website": "https://www.gr.ch/sozialamt",
+        "email": "info@soa.gr.ch"
+      }
+    },
+    "JU": {
+      "hauptort": "Delémont",
+      "cantonal_multiplier": 1.60,
+      "communal_multiplier": 1.40,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Etablissement cantonal des assurances sociales",
+        "tel": "+41 32 952 11 11",
+        "addr": "Rue Bel-Air 3, Case postale 368, 2350 Saignelégier",
+        "website": "https://www.ecasjura.ch",
+        "email": "info@ecasjura.ch"
+      },
+      "praemien": {
+        "name": "Etablissement cantonal des assurances sociales",
+        "tel": "+41 32 952 11 11",
+        "addr": "Rue Bel-Air 3, Case postale 368, 2350 Saignelégier",
+        "website": "https://www.ecasjura.ch",
+        "email": "info@ecasjura.ch"
+      },
+      "wohn": {
+        "name": "Service de l'action sociale",
+        "tel": "+41 32 420 51 40",
+        "addr": "Faubourg des Capucins 20, 2800 Delémont",
+        "website": "https://www.jura.ch/sas",
+        "email": "secr.sas@jura.ch"
+      }
+    },
+    "LU": {
+      "hauptort": "Luzern",
+      "cantonal_multiplier": 1.55,
+      "communal_multiplier": 1.00,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "WAS Wirtschaft Arbeit Soziales Ausgleichskasse Luzern",
+        "tel": "+41 41 209 00 01",
+        "addr": "Würzenbachstrasse 8, Postfach 6000 Luzern 15",
+        "website": "https://www.was-luzern.ch",
+        "email": "N/A"
+      },
+      "praemien": {
+        "name": "WAS Wirtschaft Arbeit Soziales, Ausgleichskasse Luzern",
+        "tel": "+41 41 209 00 01",
+        "addr": "Würzenbachstrasse 8, Postfach 6000 Luzern 15",
+        "website": "https://www.was-luzern.ch",
+        "email": "N/A"
+      },
+      "wohn": {
+        "name": "Kantonales Sozialamt Luzern - Dienststelle Soziales und Gesellschaft",
+        "tel": "+41 41 228 68 78",
+        "addr": "Rösslimattstr. 37, Postfach 3439, 6002 Luzern",
+        "website": "https://www.lu.ch/sozialamt",
+        "email": "disg@lu.ch"
+      }
+    },
+    "NE": {
+      "hauptort": "Neuchâtel",
+      "cantonal_multiplier": 1.65,
+      "communal_multiplier": 1.45,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Caisse cantonale neuchâteloise de compensation",
+        "tel": "+41 32 889 65 01",
+        "addr": "Fbg de l'Hôpital 28, Case postale 2116, 2001 Neuchâtel",
+        "website": "https://www.caisseavsne.ch",
+        "email": "N/A"
+      },
+      "praemien": {
+        "name": "Office cantonal de l'assurance-maladie",
+        "tel": "+41 32 889 66 30",
+        "addr": "Espace de l'Europe 2, Postfach 716, 2002 Neuchâtel",
+        "website": "https://www.ne.ch/ocam",
+        "email": "ocam@ne.ch"
+      },
+      "wohn": {
+        "name": "Office de l'action sociale",
+        "tel": "+41 32 889 66 00",
+        "addr": "Espace de l’Europe 2, Case postale 752, 2002 Neuchâtel",
+        "website": "https://www.ne.ch/action-sociale",
+        "email": "Office.AideSociale@ne.ch"
+      }
+    },
+    "NW": {
+      "hauptort": "Stans",
+      "cantonal_multiplier": 2.35,
+      "communal_multiplier": 0.26,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Ausgleichskasse Nidwalden",
+        "tel": "+41 41 618 51 00",
+        "addr": "Stansstaderstrasse 88, Postfach 6371 Stans",
+        "website": "https://www.aknw.ch",
+        "email": "info@aknw.ch"
+      },
+      "praemien": {
+        "name": "Ausgleichskasse Nidwalden",
+        "tel": "+41 41 618 51 00",
+        "addr": "Stansstaderstrasse 88, Postfach 6371 Stans",
+        "website": "https://www.aknw.ch",
+        "email": "info@aknw.ch"
+      },
+      "wohn": {
+        "name": "Kantonales Sozialamt Nidwalden",
+        "tel": "+41 41 618 75 50",
+        "addr": "Engelbergstrasse 34, 6371 Stans",
+        "website": "https://www.nw.ch/sozialamt",
+        "email": "sozialamt@nw.ch"
+      }
+    },
+    "OW": {
+      "hauptort": "Sarnen",
+      "cantonal_multiplier": 3.86,
+      "communal_multiplier": 0.54,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Ausgleichskasse IV-Stelle Obwalden",
+        "tel": "+41 41 666 27 50",
+        "addr": "Brünigstrasse 144, 6060 Sarnen",
+        "website": "https://www.akow.ch",
+        "email": "info@akow.ch"
+      },
+      "praemien": {
+        "name": "Ausgleichskasse Obwalden",
+        "tel": "+41 41 666 27 50",
+        "addr": "Brünigstrasse 144, 6060 Sarnen",
+        "website": "https://www.akow.ch/ipv",
+        "email": "info@akow.ch"
+      },
+      "wohn": {
+        "name": "Sozialamt (Sicherheits- und Justizdepartement)",
+        "tel": "+41 41 666 63 35",
+        "addr": "Dorfplatz 4, Postfach 1261, 6061 Sarnen",
+        "website": "https://www.ow.ch/sozialamt",
+        "email": "sozialamt@ow.ch"
+      }
+    },
+    "SG": {
+      "hauptort": "St. Gallen",
+      "cantonal_multiplier": 1.35,
+      "communal_multiplier": 1.15,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "SVA St.Gallen",
+        "tel": "+41 71 282 66 33",
+        "addr": "Brauerstrasse 54, 9016 St. Gallen",
+        "website": "https://www.svasg.ch",
+        "email": "N/A"
+      },
+      "praemien": {
+        "name": "SVA St.Gallen",
+        "tel": "+41 71 282 61 91",
+        "addr": "Brauerstrasse 54, 9016 St. Gallen",
+        "website": "https://www.svasg.ch",
+        "email": "N/A"
+      },
+      "wohn": {
+        "name": "Amt für Soziales des Kantons St. Gallen",
+        "tel": "+41 58 229 33 18",
+        "addr": "Spisergasse 41, 9001 St. Gallen",
+        "website": "https://www.sg.ch/soziales",
+        "email": "info.diasfo@sg.ch"
+      }
+    },
+    "SH": {
+      "hauptort": "Schaffhausen",
+      "cantonal_multiplier": 1.10,
+      "communal_multiplier": 1.05,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "SVA Schaffhausen",
+        "tel": "+41 52 632 61 11",
+        "addr": "Oberstadt 9, 8200 Schaffhausen",
+        "website": "https://www.svash.ch",
+        "email": "N/A"
+      },
+      "praemien": {
+        "name": "SVA Schaffhausen",
+        "tel": "+41 52 632 61 11",
+        "addr": "Oberstadt 9, 8200 Schaffhausen",
+        "website": "https://www.svash.ch",
+        "email": "N/A"
+      },
+      "wohn": {
+        "name": "Kantonales Sozialamt",
+        "tel": "+41 52 632 76 85",
+        "addr": "Platz 4, Postfach 1421, 8201 Schaffhausen",
+        "website": "https://www.sh.ch/sozialamt",
+        "email": "info.soza@ktsh.ch"
+      }
+    },
+    "SO": {
+      "hauptort": "Solothurn",
+      "cantonal_multiplier": 1.50,
+      "communal_multiplier": 1.05,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Ausgleichskasse des Kantons Solothurn",
+        "tel": "+41 32 686 22 00",
+        "addr": "Allmendweg 6, 4528 Zuchwil",
+        "website": "https://www.akso.ch",
+        "email": "info@akso.ch"
+      },
+      "praemien": {
+        "name": "Ausgleichskasse des Kantons Solothurn",
+        "tel": "+41 32 686 22 00",
+        "addr": "Allmendweg 6, 4528 Zuchwil",
+        "website": "https://www.akso.ch",
+        "email": "info@akso.ch"
+      },
+      "wohn": {
+        "name": "Amt für soziale Sicherheit",
+        "tel": "+41 32 627 23 11",
+        "addr": "Ambassadorenhof, 4500 Solothurn",
+        "website": "https://www.so.ch/soziales",
+        "email": "aso@ddi.so.ch"
+      }
+    },
+    "SZ": {
+      "hauptort": "Schwyz",
+      "cantonal_multiplier": 1.15,
+      "communal_multiplier": 1.75,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Ausgleichskasse und IV-Stelle Schwyz",
+        "tel": "+41 41 819 04 25",
+        "addr": "Bahnhofstrasse 16, Postfach 53, 6341 Schwyz",
+        "website": "https://www.aksz.ch",
+        "email": "info@aksz.ch"
+      },
+      "praemien": {
+        "name": "Ausgleichskasse Schwyz, Abteilung Leistungen (KVG)",
+        "tel": "+41 41 819 04 25",
+        "addr": "Postfach 53, 6341 Schwyz",
+        "website": "https://www.aksz.ch",
+        "email": "info@aksz.ch"
+      },
+      "wohn": {
+        "name": "Amt für Gesundheit und Soziales",
+        "tel": "+41 41 819 16 65",
+        "addr": "Kollegiumstrasse 28, Postfach 2161, 6431 Schwyz",
+        "website": "https://www.sz.ch/ags",
+        "email": "Roland.wespi@sz.ch"
+      }
+    },
+    "TG": {
+      "hauptort": "Frauenfeld",
+      "cantonal_multiplier": 1.30,
+      "communal_multiplier": 1.10,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Sozialversicherungszentrum Thurgau",
+        "tel": "+41 58 225 75 75",
+        "addr": "Promenadenstrasse 80, Postfach 4584 Frauenfeld",
+        "website": "https://www.svztg.ch",
+        "email": "N/A"
+      },
+      "praemien": {
+        "name": "Krankenkassenkontrollstelle der Wohnsitzgemeinde",
+        "tel": "+41 58 225 75 75",
+        "addr": "Promenadenstrasse 80, 8510 Frauenfeld",
+        "website": "https://www.gesundheitsamt.tg.ch",
+        "email": "gesundheitsamt@tg.ch"
+      },
+      "wohn": {
+        "name": "Fürsorgeamt des Kantons Thurgau",
+        "tel": "+41 58 345 60 20",
+        "addr": "Promenadenstrasse 16, 8510 Frauenfeld",
+        "website": "https://sozialamt.tg.ch",
+        "email": "info.soa@tg.ch"
+      }
+    },
+    "TI": {
+      "hauptort": "Bellinzona",
+      "cantonal_multiplier": 1.00,
+      "communal_multiplier": 0.90,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Istituto delle assicurazioni sociali",
+        "tel": "+41 91 821 91 11",
+        "addr": "Via Ghiringhelli 15a, 6501 Bellinzona",
+        "website": "https://www4.ti.ch/dss/ias",
+        "email": "ias@ti.ch"
+      },
+      "praemien": {
+        "name": "Ufficio delle prestazioni, Servizio sussidi assicurazione malattie",
+        "tel": "+41 91 821 93 11",
+        "addr": "Viale Stazione 28a, 6500 Bellinzona",
+        "website": "https://www4.ti.ch/dss/ias",
+        "email": "ias@ti.ch"
+      },
+      "wohn": {
+        "name": "Ufficio del sostegno sociale e dell’inserimento - Divisione dell’azione sociale e delle famiglie",
+        "tel": "+41 91 814 70 51",
+        "addr": "Viale Officina 6, 6501 Bellinzona",
+        "website": "https://www4.ti.ch/dss/uss",
+        "email": "dss-ussi@ti.ch"
+      }
+    },
+    "UR": {
+      "hauptort": "Altdorf",
+      "cantonal_multiplier": 0.95,
+      "communal_multiplier": 1.15,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Sozialversicherungsstelle Uri",
+        "tel": "+41 41 874 50 10",
+        "addr": "Gotthardstrasse 17, Postfach 1045, 6460 Altdorf",
+        "website": "https://www.svsuri.ch",
+        "email": "info@svsuri.ch"
+      },
+      "praemien": {
+        "name": "Amt für Gesundheit",
+        "tel": "+41 41 875 22 42",
+        "addr": "Klausenstrasse 4, 6460 Altdorf",
+        "website": "https://www.ur.ch/praemienverbilligung",
+        "email": "gesundheit@ur.ch"
+      },
+      "wohn": {
+        "name": "Amt für Soziales (Gesundheits-, Sozial- und Umwelt-direktion Uri)",
+        "tel": "+41 41 875 21 51",
+        "addr": "Klausenstrasse 4, 6460 Altdorf",
+        "website": "https://www.ur.ch/soziales",
+        "email": "ds.gsud@ur.ch"
+      }
+    },
+    "VD": {
+      "hauptort": "Lausanne",
+      "cantonal_multiplier": 1.70,
+      "communal_multiplier": 1.20,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Caisse cantonale vaudoise de compensation",
+        "tel": "+41 21 964 12 11",
+        "addr": "Rue des Moulins 3, 1800 Vevey",
+        "website": "https://www.caisseavsvaud.ch",
+        "email": "N/A"
+      },
+      "praemien": {
+        "name": "Office vaudois de l'assurance-maladie",
+        "tel": "+41 21 557 47 47",
+        "addr": "Route des Plaines-du-Loup 1, 1014 Lausanne",
+        "website": "https://www.vd.ch/ovam",
+        "email": "ovam@vd.ch"
+      },
+      "wohn": {
+        "name": "Département de la santé et de l’action sociale (DSAS)",
+        "tel": "+41 21 316 52 21",
+        "addr": "Av. des Casernes 2, 1014 Lausanne",
+        "website": "https://www.vd.ch/dsas",
+        "email": "info.dgcs@vd.ch"
+      }
+    },
+    "VS": {
+      "hauptort": "Sion",
+      "cantonal_multiplier": 1.40,
+      "communal_multiplier": 1.00,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Caisse de compensation du canton du Valais",
+        "tel": "+41 27 607 55 00",
+        "addr": "Avenue Pratifori 22, 1950 Sion",
+        "website": "https://www.avs.vs.ch",
+        "email": "info@avs.vs.ch"
+      },
+      "praemien": {
+        "name": "Ausgleichskasse des Kantons Wallis, Abteilung Subventionen",
+        "tel": "+41 27 324 91 11",
+        "addr": "Avenue Pratifori 22, 1950 Sion",
+        "website": "https://www.avs.vs.ch",
+        "email": "subventions@avs.vs.ch"
+      },
+      "wohn": {
+        "name": "Office de coordination des prestations sociales - Action sociale du Valais",
+        "tel": "+41 27 606 48 00",
+        "addr": "Rue du Scex 4, 1950 Sion",
+        "website": "https://www.vs.ch/action-sociale",
+        "email": "Jerome.favez@admin.vs.ch"
+      }
+    },
+    "ZG": {
+      "hauptort": "Zug",
+      "cantonal_multiplier": 0.75,
+      "communal_multiplier": 0.85,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "Ausgleichskasse Zug",
+        "tel": "+41 41 560 47 00",
+        "addr": "Aabachstrasse 5, Postfach 5570, 6304 Zug",
+        "website": "https://www.akzug.ch",
+        "email": "N/A"
+      },
+      "praemien": {
+        "name": "Zuständige Gemeindestelle des Wohnortes",
+        "tel": "+41 41 560 47 00",
+        "addr": "Aabachstrasse 5, 6304 Zug",
+        "website": "https://www.akzug.ch/ipv",
+        "email": "info@akzug.ch"
+      },
+      "wohn": {
+        "name": "Kantonales Sozialamt",
+        "tel": "+41 41 728 39 61",
+        "addr": "Neugasse 2, Postfach 146, 6301 Zug",
+        "website": "https://www.zg.ch/sozialamt",
+        "email": "sozialamt@zg.ch"
+      }
+    },
+    "ZH": {
+      "hauptort": "Zürich",
+      "cantonal_multiplier": 0.98,
+      "communal_multiplier": 1.19,
+      "source": "ESTV Steuerfüsse Kantonshauptorte 2025",
+      "familien": {
+        "name": "SVA Zürich Ausgleichskasse",
+        "tel": "+41 44 448 50 00",
+        "addr": "Röntgenstrasse 17, Postfach 8087 Zürich",
+        "website": "https://www.svazurich.ch",
+        "email": "N/A"
+      },
+      "praemien": {
+        "name": "SVA Zürich",
+        "tel": "+41 44 448 53 75",
+        "addr": "Röntgenstrasse 17, Postfach 8087 Zürich",
+        "website": "https://www.svazurich.ch",
+        "email": "N/A"
+      },
+      "wohn": {
+        "name": "Sozialamt des Kantons Zürich",
+        "tel": "+41 43 259 24 51",
+        "addr": "Schaffhauserstr. 78, Postfach 8090 Zürich",
+        "website": "https://www.zh.ch/sozialamt",
+        "email": "info@sa.zh.ch"
+      }
+    }
+  },
+  "overall_source": "ESTV Steuerfüsse der Kantonshauptorte 2025 (XLSX, 28.10.2025). Beispielrechnung für alleinstehende Person mit CHF 60'000 Bruttoeinkommen. Für exakte Werte: https://swisstaxcalculator.estv.admin.ch"
+}
